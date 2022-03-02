@@ -21,5 +21,5 @@ func main() {
 	})
 
 	router.SetupRoutes(app)
-	log.Fatal(app.Listen(":" + config.Config("PORT")))
+	log.Fatal(app.Listen(config.Config("LISTEN") + ":" + config.Config("PORT")))
 }
